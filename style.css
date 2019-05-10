@@ -1,0 +1,11 @@
+/*
+Color principal: #1B2B34
+Color secundario: #FECE1A
+Color terciario: white
+*/
+
+body{
+    background-color: #1B2B34;
+    color: white;
+    font-family: "Helvetica";
+}
