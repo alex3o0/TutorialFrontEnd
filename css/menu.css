@@ -1,0 +1,107 @@
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  background-color: #1B2B34;
+
+  overflow: hidden;
+  height: 55px;
+}
+header>.logo-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+header>.logo-container>img{
+  height: 40px;
+  width: 120px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+}
+.menu>.menu-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left:5px;
+  height: 20px;
+  width: 80px;
+  border: 1px solid #1B2B34;
+  padding: 5px 4px;
+  transition: border 0.3s ease-in-out;
+}
+
+.menu>.menu-item:hover{
+  border: 1px solid #FECE1A;
+}
+.menu>.menu-item.selected{
+  border: 1px solid #FECE1A;
+}
+
+label[for="btnMenu"]{
+  display: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid white;
+  height: 30px;
+  width: 30px;
+  background-color: #FECE1A;
+}
+
+#btnBack{
+  border-radius: 5px;
+  border: 1px solid white;
+  height: 30px;
+  width: 30px;
+  background-color: #FECE1A;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+#btnMenu{
+  display:none;
+}
+
+@media only screen and (max-width: 600px){
+  label[for="btnMenu"]{
+    display: block;
+  }
+  header{
+    flex-direction: column;
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu{
+    flex-flow: column;
+    align-items: center;
+  }
+  .menu>.menu-item{
+    width: 100%;
+  }
+
+  #btnMenu:checked + header{
+    height: 300px;
+  }
+
+  header>.logo-container{
+    height: 60px;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+
+}
